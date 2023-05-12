@@ -18,12 +18,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/index', function () {
-    return view('index');
+Route::get('/history', function () {
+    return view('student.history');
+});
+
+Route::get('/notification', function () {
+    return view('student.notification');
 });
 
 Route::get('/dashboard', function () {
-    return Auth::user()->roles()->first()->name == 'admin' ? view('admin') : view('dashboard');
+    return Auth::user()->roles()->first()->name == 'admin' ? view('admin') : view('student.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

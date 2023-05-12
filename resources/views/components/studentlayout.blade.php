@@ -17,7 +17,7 @@
     </head>
     <body class="font-sans antialiased">
         @include('layout.studentnavbar')
-       
+        @include('layout.studentsidebar')
         <div class="min-h-screen bg-gray-50">
         
 
