@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserTableSeeder::class,
             RoleTableSeeder::class,
             SiswaTableSeeder::class,
+            BukuTableSeeder::class,    
         ]);
     }
 }
