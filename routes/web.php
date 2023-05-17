@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,8 +25,15 @@ Route::get('/notification', function () {
     return view('student.notification');
 });
 
+Route::get('/notificationadmin', function () {
+    return view('admin.notification');
+});
+Route::get('/historyadmin', function () {
+    return view('admin.history');
+});
+
 Route::get('/dashboard', function () {
-    return Auth::user()->roles()->first()->name == 'admin' ? view('admin') : view('student.dashboard');
+    return Auth::user()->roles()->first()->name == 'admin' ? view('admin.dashboard') : view('student.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
