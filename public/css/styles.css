@@ -304,11 +304,6 @@ figure {
   margin: 0 0 1rem;
 }
 
-prp {
-  width: 100%;
-  height: auto;
-}
-
 img,
 svg {
   vertical-align: middle;
@@ -10984,7 +10979,7 @@ html {
   font-size: 1.25rem;
 }
 .masthead .masthead-avatar {
-  width: 25rem;
+  width: 15rem;
 }
 
 @media (min-width: 992px) {
