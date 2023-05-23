@@ -1,10 +1,3 @@
-# UTS Pemrograman Web Lanjut
-<h2>Sistem Informasi Perpustkaakaan Menggunakan Laravel 8</h2> 
-<h3>Aditio Hidayatulloh</h3>
-<h4>A2-2113201044</h4>
-<h4>Teknik Informatika Universitas Sangga Buana YPKP</h4>
-
-
 
 # Library yang digunakan :
 <ul>
@@ -35,12 +28,6 @@
 <li>Admin dapat melihat list buku yang dipinjam, sedangkan Anggota hanya dapat melihat list buku yang dipinjam olehnya</li>
 <li>Admin dapat melihat dan mencetak riwayat peminjaman buku, sedangkan Anggota hanya dapat melihat list buku yang dipinjam olehnya</li>
 </ol>
-
-# ERD Sistem Informasi Perpustakaan :
-<img src="/public/img/erd.png">
-
-# Link Youtube : 
-https://youtu.be/DrCNV7E-eKc
 
 </ul>
 
