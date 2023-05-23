@@ -10,7 +10,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Dashboard</h1>
+    <h3 class="text-primary"></h3>
 @endsection
 
 @push('styles')
@@ -105,9 +105,9 @@
     </div>
 
     <!-- Table-->
-    <h1 class="text-primary"> Riwayat Peminjaman</h1>
+    <h3 class="text-primary"> Riwayat Peminjaman</h3>
     <div class="col-lg-auto">
-        <div class="card mb-4">
+        <div class="card mb-4" style="border-style:none;">
             <div class="table-responsive p-3">
                 <table class="table align-items-center justify-content-center table-flush table-hover" id="dataTableHover" style="font-size:.7rem">
                     <thead class="thead-light">

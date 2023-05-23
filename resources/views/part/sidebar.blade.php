@@ -9,7 +9,7 @@
     <li class="nav-item">
         <a class="nav-link" href="/home">
             <i class="fa-solid fa-house"></i>
-            <span>Home</span></a>
+            <span>Beranda</span></a>
     </li>
     <hr class="sidebar-divider">
     <div class="sidebar-heading">

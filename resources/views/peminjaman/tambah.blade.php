@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Form Pinjam Buku</h1>
+    <h3 style="color:#1abc9c;">Form Peminjaman Buku</h3>
 @endsection
 
 @section('content')
@@ -20,14 +20,14 @@
             <form action="/peminjaman" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="nama" class="text-primary font-weight-bold">Nama Peminjam</label>
+                    <label for="nama" class=" font-weight-bold" style="color:#1abc9c;">Nama Peminjam</label>
                     @if(Auth::user()->isAdmin == 1)
                     <select name="users_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($peminjam as $item)
                                 <option value="{{ $item->id }}">{{ $item->user->name}} ( {{ $item->npm }} )</option>
                             @empty
-                                tidak ada user
+                                Tidak ada user
                             @endforelse
                     </select>
                     @endif
@@ -45,13 +45,13 @@
 
 
                 <div class="fom-group">
-                    <label for="buku" class="text-primary font-weight-bold">Buku yang akan dipinjam</label>
+                    <label for="buku" class="font-weight-bold" style="color:#1abc9c;">Buku yang akan dipinjam</label>
                     <select name="buku_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($buku as $item)
                                 <option value="{{ $item->id }}">{{ $item->judul}} ( {{ $item->kode_buku }} ) - {{ $item->status }}</option>
                             @empty
-                                tidak ada buku yang tersedia
+                                Tidak ada buku yang tersedia
                             @endforelse
                     </select>
                 </div>
@@ -61,8 +61,8 @@
                 @enderror
 
                 <div class="d-flex justify-content-end mt-5">
-                    <a href="/peminjaman" class="btn btn-danger">Kembali</a>
-                    <button type="submit" class="btn btn-primary mx-1 px-4">Submit</button>
+                    <a href="/peminjaman" class="btn btn-danger">Batal</a>
+                    <button type="submit" class="btn btn-primary mx-1 px-4" style="background-color:#1abc9c; border-style:none">Submit</button>
                 </div>
 
 

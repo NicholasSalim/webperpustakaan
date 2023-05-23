@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Detail Anggota</h1>
+    <h3 style="color:#1abc9c;">Detail User</h3>
 @endsection
 
 @push('styles')
@@ -34,7 +34,7 @@
 @section('content')
     <div class="card">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h4 class="m-0 font-weight-bold text-primary">Profile</h4>
+            <h4 class="m-0 font-weight-bold " style="color:#1abc9c;">Profil</h4>
         </div>
         <div class="row d-flex" style="gap:3rem">
             <div class="col-2 ml-5 my-4">
@@ -47,37 +47,37 @@
             </div>
             <div class="col-4">
                 <div class="form-group mb-3">
-                    <label for="nama" class="text-lg text-primary font-weight-bold">Nama Lengkap</label>
+                    <label for="nama" class="text-lg font-weight-bold" style="color:#1abc9c;">Nama Lengkap</label>
                     <h4>{{ $profile->user->name }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="npm" class="text-lg text-primary font-weight-bold">Nomor Induk Mahasiswa</label>
+                    <label for="npm" class="text-lg font-weight-bold" style="color:#1abc9c;">Nomor Induk Siswa</label>
                     <h4>{{ $profile->npm }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Program Studi</label>
+                    <label for="prodi" class="text-lg font-weight-bold" style="color:#1abc9c;">Kelas</label>
                     <h4>{{ $profile->prodi }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Alamat</label>
+                    <label for="prodi" class="text-lg font-weight-bold" style="color:#1abc9c;">Alamat</label>
                     <h4>{{ $profile->alamat }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Nomor Telephone</label>
+                    <label for="prodi" class="text-lg font-weight-bold" style="color:#1abc9c;">Nomor Telephone</label>
                     <h4>{{ $profile->noTelp }}</h4>
                 </div>
 
             </div>
         </div>
         <div class="edit d-flex justify-content-end my-4 mx-4">
-            <a href="/anggota" class="btn btn-primary px-5">Kembali</a>
+            <a href="/anggota" class="btn btn-primary px-5" style="background-color:#1abc9c;">Kembali</a>
         </div>
     </div>
-    <h2 class="text-primary my-4">Daftar Riwayat Pinjaman Anggota</h2>
+    <h3 class="my-4" style="color:#1abc9c;">Daftar Riwayat Pinjaman User</h3>
     <div class="col-lg-auto">
         <div class="card mb-4">
             <div class="table-responsive p-3">

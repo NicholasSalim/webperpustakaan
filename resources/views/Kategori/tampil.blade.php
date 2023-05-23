@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h2 class="text-primary">Daftar Kategori</h2>
+    <h3 class="text-primary">Daftar Kategori</h3>
 @endsection
 
 @push('styles')
@@ -33,11 +33,11 @@
 
 @section('content')
     @if (Auth::user()->isAdmin == 1)
-        <a href="/kategori/create" class="btn btn-info mb-3">Tambah Kategori</a>
+        <a href="/kategori/create" class="btn btn-primary mb-3">Tambah Kategori</a>
     @endif
 
-    <div class="col-lg-auto">
-        <div class="card mb-4">
+    <div class="col-lg-auto" >
+        <div class="card mb-4" style="border-style:none;">
 
             <div class="table-responsive p-3">
                 <table class="table align-items-center table-flush table-hover" id="dataTableHover">
@@ -69,18 +69,18 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="ModalLabelDelete">Ohh No!</h5>
+                                                        <h5 class="modal-title" id="ModalLabelDelete">Yakin?</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Are you sure you want to delete?</p>
+                                                        <p>Hapus kategori?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-outline-primary"
-                                                            data-dismiss="modal">Cancel</button>
+                                                            data-dismiss="modal">Batal</button>
                                                         <form action="/kategori/{{ $item->id }}" method="post" id="DeleteModal">
                                                             @csrf
                                                             @method('delete')
@@ -96,7 +96,7 @@
 
             @if (Auth::user()->isAdmin == 0)
                 <a href="/kategori/{{ $item->id }}" class="btn-sm btn-info px-3 py-2"
-                    style="text-decoration: none;color:white">Detail</a>
+                    style="text-decoration: none;color:white;  border-radius: 10px;">Detail</a>
             @endif
 
             </form>

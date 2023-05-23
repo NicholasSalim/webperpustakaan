@@ -10,7 +10,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Tambah Kategori</h1>
+    <h3 style="color:#1abc9c;">Tambah Kategori</h3>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
         <form action="/kategori" method="post">
             @csrf
             <div class="form-group">
-                <label for="formGroupExampleInput">Nama Kategori</label>
+                <label for="formGroupExampleInput" style="color:#1abc9c;">Nama Kategori</label>
                 <input name="nama" type="text" class="form-control" id="formGroupExampleInput">
             </div>
             @error('nama')
@@ -27,13 +27,13 @@
             @enderror
 
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Deskripsi</label>
+                <label for="exampleFormControlTextarea1" style="color:#1abc9c;">Deskripsi</label>
                 <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="3"></textarea>
 
             </div>
 
             <a href="/kategori" class="btn btn-danger">Batal</a>
-            <button class="btn btn-info">Tambah</button>
+            <button class="btn btn-info" style="background-color:#1abc9c;">Tambah</button>
 
         </form>
     </div>

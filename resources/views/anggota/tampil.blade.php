@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h2 class="text-primary">Daftar Anggota</h2>
+    <h3 class="text-primary">Daftar User</h3>
 @endsection
 
 @push('styles')
@@ -32,19 +32,18 @@
 @endpush
 
 @section('content')
-    <a href="/anggota/create" class="btn btn-info mb-3">Tambah Anggota</a>
+    <a href="/anggota/create" class="btn btn-primary mb-3">Tambah User</a>
 
     <div class="col-lg-12">
-        <div class="card mb-4">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between ">
-            </div>
+        <div class="card mb-4" style="border-style:none;">
+            
             <div class="table-responsive p-3">
                 <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">No.</th>
-                            <th scope="col">Nama Anggota</th>
-                            <th scope="col">NPM</th>
+                            <th scope="col">Nama User</th>
+                            <th scope="col">NIS</th>
                             <th scope="col">Email</th>
                             <th scope="col">Tombol Aksi</th>
                         </tr>
@@ -72,18 +71,18 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="ModalLabelDelete">Ohh No!</h5>
+                                                        <h5 class="modal-title" id="ModalLabelDelete">Yakin?</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Are you sure you want to delete?</p>
+                                                        <p>Hapus user?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-outline-primary"
-                                                            data-dismiss="modal">Cancel</button>
+                                                            data-dismiss="modal">Batal</button>
                                                         <form action="/anggota/{{ $item->id }}" method="post">
                                                             @csrf
                                                             @method('delete')

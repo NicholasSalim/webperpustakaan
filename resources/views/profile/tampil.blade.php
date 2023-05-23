@@ -11,7 +11,7 @@
 @section('content')
     <div class="card">
         <div class="card-header py-3">
-            <h4 class="m-0 font-weight-bold text-primary">Profile</h4>
+            <h4 class="m-0 font-weight-bold text-primary">Profil</h4>
         </div>
         <div class="row">
             <div class="col-auto ml-5 mr-5 my-4">
@@ -29,12 +29,12 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="npm" class="text-lg text-primary font-weight-bold">Nomor Induk Mahasiswa</label>
+                    <label for="npm" class="text-lg text-primary font-weight-bold">Nomor Induk Siswa</label>
                     <h4>{{ $profile->npm }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Program Studi</label>
+                    <label for="prodi" class="text-lg text-primary font-weight-bold">Kelas</label>
                     <h4>{{ $profile->prodi }}</h4>
                 </div>
 
@@ -44,14 +44,14 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Nomor Telephone</label>
+                    <label for="prodi" class="text-lg text-primary font-weight-bold">Nomor Telpon</label>
                     <h4>{{ $profile->noTelp }}</h4>
                 </div>
 
             </div>
         </div>
         <div class="edit d-flex justify-content-end my-4 mx-4">
-            <a href="/profile/{{ $profile->id }}/edit" class="btn btn-primary px-5">Edit Profile</a>
+            <a href="/profile/{{ $profile->id }}/edit" class="btn btn-primary px-5">Edit Profil</a>
         </div>
     </div>
 @endsection

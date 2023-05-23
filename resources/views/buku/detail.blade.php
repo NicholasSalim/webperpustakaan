@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-<h1 class="text-primary">{{ $buku->judul }}</h1>
+<h3 style="color:#1abc9c;">{{ $buku->judul }}</h3>
 @endsection
 
 @section('content')
@@ -20,11 +20,11 @@
         @else
         <img class="img mb-3" src="{{asset('/images/noImage.jpg')}}"style="height:200px;width:200px">
         @endif
-        <h5 class="pengarang">Pengarang : <a href="#" class="text-primary" style="text-decoration: none">{{ $buku->pengarang }}</a></h5>
-        <h5 class="penerbit">Penerbit : <a href="#" class="text-primary" style="text-decoration: none">{{ $buku->penerbit }}</a></h5>
-        <h5 class="tahun_terbit">Tahun Terbit : <a href="#" class="text-primary" style="text-decoration: none">{{ $buku->tahun_terbit }}</a></h5>
+        <h5 class="pengarang">Pengarang : <a href="#" style="color:#1abc9c;" style="text-decoration: none">{{ $buku->pengarang }}</a></h5>
+        <h5 class="penerbit">Penerbit : <a href="#" style="color:#1abc9c;" style="text-decoration: none">{{ $buku->penerbit }}</a></h5>
+        <h5 class="tahun_terbit">Tahun Terbit : <a href="#" style="color:#1abc9c;" style="text-decoration: none">{{ $buku->tahun_terbit }}</a></h5>
         <h5 class="deskripsi">Deskripsi : <br><p class="deskripsi mt-2" style="text-align:justify; text-justify:inter-word; text-indent:1rem; letter-spacing:.1rem; word-spacing:.1rem">{{ $buku->deskripsi }}</p></h5>
-        <a href="/buku" class="btn btn-primary">Kembali</a>
+        <a href="/buku" class="btn btn-primary" style="background-color:#1abc9c; border-style:none">Kembali</a>
         </div>
     </div>
 @endsection

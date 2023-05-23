@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="row mb-0">
-                        <span class="col-md-8 mb-3 text-md-end text-dark">Belum Punya Akun ? <a href="{{ route('register') }}" class="p-0">register</a></span>
+                        <span class="col-md-8 mb-3 text-md-end text-dark"><a href="{{ route('register') }}" class="p-0 mr-3">Belum punya akun ?</a></span>
                         </div>
 
                         <div class="row mb-0">

@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h1 class="text-primary">Form Pengembalian Buku</h1>
+    <h3 class="text-primary">Form Pengembalian Buku</h3>
 @endsection
 
 @section('content')
@@ -36,7 +36,7 @@
                         @forelse ($buku as $item)
                                 <option value="{{ $item->id }}">{{ $item->judul}} ( {{ $item->kode_buku }} ) - {{ $item->status }}</option>
                             @empty
-                                tidak ada buku yang tersedia
+                                Tidak ada buku yang tersedia
                             @endforelse
                     </select>
                 </div>

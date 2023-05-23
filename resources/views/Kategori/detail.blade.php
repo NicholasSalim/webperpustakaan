@@ -9,23 +9,23 @@
 @endsection
 
 @section('judul')
-    <h2 class="text-primary">Detail Kategori</h2>
+    <h3 style="color:#1abc9c;">Detail Kategori</h3>
 @endsection
 
 @section('content')
     <div class="card">
-        <h3 class="judul m-3 text-primary" style="font-weight:bold;">{{ $kategori->nama }}</h3>
+        <h3 class="judul m-3" style="color:#1abc9c;"style="font-weight:bold;">{{ $kategori->nama }}</h3>
         @if ($kategori->deskripsi != null)
             <p class="deskripsi m-3">{{ $kategori->deskripsi }}</p>
         @else
             <p class="deskripsi m-3">Tidak Ada Deskripsi</p>
         @endif
         <div class="d-flex justify-content-end">
-            <a href="/kategori" class="btn btn-info mx-3 my-3">Kembali</a>
+            <a href="/kategori" class="btn btn-info mx-3 my-3" style="background-color:#1abc9c; border-style:none">Kembali</a>
         </div>
     </div>
 
-    <h4 class="m-3 text-primary" style="font-weight: bold;">Buku Terkait Kategori :</h4>
+    <h4 class="m-3" style="color:#1abc9c;" style="font-weight: bold;">Buku Terkait Kategori :</h4>
 
     <div class="card container-fluid mb-3">
 
@@ -62,7 +62,7 @@
                                     <button class="btn-sm btn-warning px-2"><a href="/buku/{{ $item->id }}/edit"
                                             style="text-decoration: none;color:white">Edit</a></button>
                                     <button class="btn-sm btn-danger px-3"><a data-toggle="modal"
-                                            data-target="#DeleteModal{{ $item->id }}">Delete</a></button>
+                                            data-target="#DeleteModal{{ $item->id }}">Hapus</a></button>
                                 </div>
                             @endif
 
@@ -81,22 +81,22 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabelDelete">Ohh No!</h5>
+                                            <h5 class="modal-title" id="ModalLabelDelete">Yakin?</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Are you sure you want to delete?</p>
+                                            <p>Hapus?</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-primary"
-                                                data-dismiss="modal">Cancel</button>
+                                                data-dismiss="modal">Batal</button>
                                             <form action="/buku/{{ $item->id }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button class="btn btn-outline-danger px-4" type="submit"
-                                                    value="delete">Delete</button>
+                                                    value="delete">Hapus</button>
                                             </form>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             @empty
-                <h3 class="text-primary mt-3">Tidak ada buku</h3>
+                <h3 style="color:#1abc9c;">-</h3>
             @endforelse
 
         </div>
