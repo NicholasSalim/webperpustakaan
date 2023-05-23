@@ -105,7 +105,7 @@
     </div>
 
     <!-- Table-->
-    <h3 class="text-primary"> Riwayat Peminjaman</h3>
+    <h3 style="color:#1abc9c;"> Riwayat Peminjaman</h3>
     <div class="col-lg-auto">
         <div class="card mb-4" style="border-style:none;">
             <div class="table-responsive p-3">

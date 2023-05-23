@@ -82,7 +82,7 @@
 
 
         <div class="button-save d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary mt-4 mx-4 px-5 py-1" style="background-color:#1abc9c;">Simpan</button>
+            <button type="submit" class="btn btn-primary mt-4 mx-4 px-5 py-1" style="background-color:#1abc9c; border-style:none">Simpan</button>
         </form>
         </div>
     </div>

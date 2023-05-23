@@ -9,12 +9,12 @@
 @endsection
 
 @section('judul')
-    <h3 class="text-primary">Daftar Buku</h3>
+    <h3 style="color:#1abc9c;">Daftar Buku</h3>
 @endsection
 
 @section('content')
     @if (Auth::user()->isAdmin == 1)
-        <a href="/buku/create" class="btn btn-primary mb-3">Tambah Buku</a>
+        <a href="/buku/create" class="btn btn-primary mb-3" style="background-color:#1abc9c; border-style:none">Tambah Buku</a>
     @endif
 
     <form class="navbar-search mb-3" action="/buku" method="GET">
@@ -22,7 +22,7 @@
             <input type="search" name="search" class="form-control bg-light border-1 small" placeholder="Cari Judul Buku"
                 aria-label="Search" aria-describedby="basic-addon2" style="border-color: primary;">
             <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">
+                <button class="btn btn-primary" style="background-color:#1abc9c; border-style:none" type="submit">
                     <i class="fas fa-search fa-sm"></i>
                 </button>
             </div>
@@ -44,11 +44,11 @@
                         <div class="card-body d-flex flex-column justify-content-between">
                             <div class="detai-buku">
                                 <h5 class="card-title text-primary"><a
-                                        href="/buku/{{ $item->id }}"style="text-decoration: none; font-size:1rem;font-weight:bold;">
+                                        href="/buku/{{ $item->id }}" style="color:#1abc9c;" style="text-decoration: none; font-size:1rem;font-weight:bold;">
                                         {{ $item->judul }}</a></h5>
                                 <p class = "cart-text m-0">Kode Buku : {{ $item->kode_buku }}</p>
-                                <p class="card-text m-0">Pengarang : <a href="#"
-                                        style="text-decoration: none;">{{ $item->pengarang }}</a></p>
+                                <p class="card-text m-0">Pengarang : <a href="#" style="color:#1abc9c;"
+                                        style="text-decoration: none; ">{{ $item->pengarang }}</a></p>
                                 <p class="card-text m-0">Kategori : </p>
                                 <p class="text-primary">
                                     @foreach ($item->kategori_buku as $kategori )

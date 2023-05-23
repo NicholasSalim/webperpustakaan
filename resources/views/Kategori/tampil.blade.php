@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h3 class="text-primary">Daftar Kategori</h3>
+    <h3 style="color:#1abc9c;">Daftar Kategori</h3>
 @endsection
 
 @push('styles')
@@ -33,7 +33,7 @@
 
 @section('content')
     @if (Auth::user()->isAdmin == 1)
-        <a href="/kategori/create" class="btn btn-primary mb-3">Tambah Kategori</a>
+        <a href="/kategori/create" class="btn btn-primary mb-3" style="background-color:#1abc9c; border-style:none;">Tambah Kategori</a>
     @endif
 
     <div class="col-lg-auto" >

@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h3 class="text-primary">Daftar User</h3>
+    <h3 style="color:#1abc9c;">Daftar User</h3>
 @endsection
 
 @push('styles')
@@ -32,7 +32,7 @@
 @endpush
 
 @section('content')
-    <a href="/anggota/create" class="btn btn-primary mb-3">Tambah User</a>
+    <a href="/anggota/create" class="btn btn-primary mb-3" style="background-color:#1abc9c; border-style:none">Tambah User</a>
 
     <div class="col-lg-12">
         <div class="card mb-4" style="border-style:none;">

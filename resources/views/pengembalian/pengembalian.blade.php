@@ -9,7 +9,7 @@
 @endsection
 
 @section('judul')
-    <h3 class="text-primary">Form Pengembalian Buku</h3>
+    <h3 style="color:#1abc9c;">Form Pengembalian Buku</h3>
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
             <form action="/pengembalian" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="nama" class="text-primary font-weight-bold">Nama Peminjam</label>
+                    <label for="nama" class=" font-weight-bold" style="color:#1abc9c;">Nama Peminjam</label>
                     <select name="users_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($peminjam as $item)
@@ -30,7 +30,7 @@
                             @endforelse
                     </select>
                     <div class="fom-group">
-                    <label for="buku" class="text-primary font-weight-bold">Buku yang akan dikembalikan</label>
+                    <label for="buku" class="font-weight-bold" style="color:#1abc9c;">Buku yang akan dikembalikan</label>
                     <select name="buku_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($buku as $item)
@@ -47,7 +47,7 @@
 
                 <div class="d-flex justify-content-end mt-5">
                     <a href="/peminjaman" class="btn btn-danger">Kembali</a>
-                    <button type="submit" class="btn btn-primary mx-1 px-4">Submit</button>
+                    <button type="submit" class="btn btn-primary mx-1 px-4" style="background-color:#1abc9c; border-style:none;">Submit</button>
                 </div>
 
 

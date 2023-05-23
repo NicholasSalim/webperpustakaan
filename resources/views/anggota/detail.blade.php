@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="edit d-flex justify-content-end my-4 mx-4">
-            <a href="/anggota" class="btn btn-primary px-5" style="background-color:#1abc9c;">Kembali</a>
+            <a href="/anggota" class="btn btn-primary px-5" style="background-color:#1abc9c; border-style:none">Kembali</a>
         </div>
     </div>
     <h3 class="my-4" style="color:#1abc9c;">Daftar Riwayat Pinjaman User</h3>

@@ -11,7 +11,7 @@
 @section('content')
     <div class="card">
         <div class="card-header py-3">
-            <h4 class="m-0 font-weight-bold text-primary">Profil</h4>
+            <h4 class="m-0 font-weight-bold " style="color:#1abc9c;">Profil</h4>
         </div>
         <div class="row">
             <div class="col-auto ml-5 mr-5 my-4">
@@ -24,34 +24,34 @@
             </div>
             <div class="col-auto mx-4">
                 <div class="form-group mb-3">
-                    <label for="nama" class="text-lg text-primary font-weight-bold">Nama Lengkap</label>
+                    <label for="nama" class="text-lg font-weight-bold" style="color:#1abc9c;">Nama Lengkap</label>
                     <h4>{{ $profile->user->name }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="npm" class="text-lg text-primary font-weight-bold">Nomor Induk Siswa</label>
+                    <label for="npm" class="text-lg font-weight-bold" style="color:#1abc9c;">Nomor Induk Siswa</label>
                     <h4>{{ $profile->npm }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Kelas</label>
+                    <label for="prodi" class="text-lg font-weight-bold" style="color:#1abc9c;">Kelas</label>
                     <h4>{{ $profile->prodi }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Alamat</label>
+                    <label for="prodi" class="text-lg font-weight-bold" style="color:#1abc9c;">Alamat</label>
                     <h4>{{ $profile->alamat }}</h4>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="prodi" class="text-lg text-primary font-weight-bold">Nomor Telpon</label>
+                    <label for="prodi" class="text-lg font-weight-bold" style="color:#1abc9c;">Nomor Telpon</label>
                     <h4>{{ $profile->noTelp }}</h4>
                 </div>
 
             </div>
         </div>
         <div class="edit d-flex justify-content-end my-4 mx-4">
-            <a href="/profile/{{ $profile->id }}/edit" class="btn btn-primary px-5">Edit Profil</a>
+            <a href="/profile/{{ $profile->id }}/edit" class="btn btn-primary px-5" style="background-color:#1abc9c; border-style:none">Edit Profil</a>
         </div>
     </div>
 @endsection
