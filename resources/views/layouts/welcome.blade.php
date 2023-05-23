@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{asset('/img/logo.png')}}" rel="icon">
+        <link href="{{asset('/img/amirhamzahlogo.png')}}" rel="icon">
         <title>Sistem Informasi Perpustakaan</title>
 
         <!-- Fonts -->
