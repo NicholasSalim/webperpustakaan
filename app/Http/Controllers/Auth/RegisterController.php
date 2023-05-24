@@ -57,8 +57,13 @@ class RegisterController extends Controller
             'alamat'=> ['required','string','max:45'],
             'noTelp'=> ['required','string','max:45'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'password' => ['required', 'string', 'min:8', 'confirmed', 'regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/            '],
+        ],
+        [
+            'password.regex' => 'Password harus memiliki 8 karakter, 1 huruf besar, 1 huruf kecil dan sebuah angka',
+           
+        ]
+    );
     }
 
     /**
