@@ -52,16 +52,24 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'npm' => ['required','string','max:10','unique:profile'],
+            'npm' => ['required','string','max:10','unique:profile','regex:/^\d{4}$/'],
             'prodi'=> ['required','string','max:45'],
             'alamat'=> ['required','string','max:45'],
-            'noTelp'=> ['required','string','max:45'],
+            'noTelp'=> ['required','string','max:45','regex:/^[0-9]*$/'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed', 'regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/            '],
         ],
         [
-            'password.regex' => 'Password harus memiliki 8 karakter, 1 huruf besar, 1 huruf kecil dan sebuah angka',
-           
+            'password.regex' => 'Password harus memiliki 8 karakter, 1 karakter spesial, 1 huruf besar, 1 huruf kecil dan sebuah angka',
+            'name.required' => 'Nama tidak boleh kosong',
+            'npm.regex' => 'Isi dengan 4 angka',
+            'prodi.required' => 'Kelas tidak boleh kosong',
+            'alamat.required' => 'Alamat tidak boleh kosong',
+            'noTelp.regex' => 'Isi dengan angka',
+            'noTelp.required' => 'Nomor telpon tidak boleh kosong',
+            'npm.required' => 'NIS tidak boleh kosong',
+            'email.required' => 'Email tidak boleh kosong',
+            'password.required' => 'Password tidak boleh kosong',
         ]
     );
     }
