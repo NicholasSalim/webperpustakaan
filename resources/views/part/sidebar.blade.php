@@ -105,6 +105,12 @@
                 </div>
             </div>
         </li>
+        <hr class="sidebar-divider">
+        <li class="nav-item">
+        <a class="nav-link" href="/#help">
+            <i class="bi bi-question-circle-fill"></i>
+            <span>Bantuan</span></a>
+        </li>
     @endif
 
 </ul>
