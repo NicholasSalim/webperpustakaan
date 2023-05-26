@@ -75,7 +75,15 @@
     @endif
 
     @if(Auth::user()->isAdmin == 0)
+    
     <div class="col-lg-auto" >
+    <div class="row ml-2 mb-2">
+        @if ($pinjamanUser->count() === 0)
+            <p class="mr-1" style="font-size:14px;">Halo {{ Auth::user()->name }}, sepertinya kamu belum meminjam buku.</p>
+            <a style="color:#1abc9c; font-size:14px;" href="/peminjaman/create">Klik tautan ini untuk meminjam</a>
+        @endif
+
+</div>
         <div class="card mb-4" style="border-style:none;">
             <div class="table-responsive p-3">
                 <table class="table align-items-center justify-content-center table-flush table-hover" id="dataTableHover" style="font-size: .7rem">

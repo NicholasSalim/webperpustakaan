@@ -46,4 +46,6 @@ class HomeController extends Controller
             return view('AnggotaDashboard',compact('kategori','buku','profile','user','pinjamanUser'));
             }
     }
+
+    
 }
