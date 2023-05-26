@@ -30,7 +30,7 @@ class ProfileController extends Controller
             'npm'=> 'required|regex:/^\d{4}$/',
             'prodi'=> 'required',
             'alamat'=> 'required',
-            'noTelp'=> 'required|regex:/^[0-9]*$/',
+            'noTelp'=> 'required|regex:/^\d{9,15}$/',
             'photoProfile'=> 'nullable|mimes:jpg,jpeg,png|max:2048'
         ],
         [
@@ -40,7 +40,7 @@ class ProfileController extends Controller
             'prodi.required'=>"Prodi tidak boleh kosong",
             'alamat.required'=>"Alamat tidak boleh kosong",
             'noTelp.required'=>"Nomor Telepon tidak boleh kosong",
-            'noTelp.regex'=> "Isi dengan angka",
+            'noTelp.regex'=> "Isi hanya dengan 9-15 angka",
             'photoProfile.mimes' =>"Foto Profile Harus Berupa jpg,jpeg,atau png",
             'photoProfile.max' => "ukuran gambar tidak boleh lebih dari 2048 MB",
         ]);

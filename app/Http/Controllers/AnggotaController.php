@@ -50,10 +50,10 @@ class AnggotaController extends Controller
     {
         $request->validate([
             'name'=> 'required',
-            'npm'=> 'required|unique:profile|',
+            'npm'=> 'required|unique:profile|regex:/^\d{4}$/',
             'prodi'=> 'required',
             'alamat'=> 'required',
-            'noTelp'=> 'required|regex:/^[0-9]*$/',
+            'noTelp'=> 'required|regex:/^\d{9,15}$/',
             'email'=>'required|unique:users',
             'password'=>'required|min:8|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/',
         ],
@@ -61,11 +61,11 @@ class AnggotaController extends Controller
             'name.required'=>"Nama tidak boleh kosong",
             'npm.required'=>"Nomor Induk tidak boleh kosong",
             'npm.unique'=>"NIS Telah Digunakan",
-            'npm.regex' => "Isi dengan 4 angka",
+            'npm.regex' => "Isi hanya dengan 4 angka",
             'prodi.required'=>"Kelas tidak boleh kosong",
             'alamat.required'=>"Alamat tidak boleh kosong",
             'noTelp.required'=>"Nomor Telepon tidak boleh kosong",
-            'noTelp.regex' => "Isi dengan angka",
+            'noTelp.regex' => "Isi hanya dengan 9-15 angka",
             'email.required'=>"Email tidak boleh kosong",
             'email.unique'=>"Email Telah Digunakan",
             'password.required'=>"Password Tidak boleh kosong",
@@ -132,7 +132,7 @@ class AnggotaController extends Controller
             'npm'=> 'required|regex:/^\d{4}$/',
             'prodi'=> 'required',
             'alamat'=> 'required',
-            'noTelp'=> 'required|regex:/^[0-9]*$/',
+            'noTelp'=> 'required|regex:/^\d{9,15}$/',
             'photoProfile'=> 'nullable|mimes:jpg,jpeg,png|max:2048'
         ],
         [
@@ -143,8 +143,8 @@ class AnggotaController extends Controller
             'noTelp.required'=>"Nomor Telepon tidak boleh kosong",
             'photoProfile.mimes' =>"Foto Profile Harus Berupa jpg,jpeg,atau png",
             'photoProfile.max' => "Ukuran gambar tidak boleh lebih dari 2048 MB",
-            'npm.regex' => "Isi dengan 4 angka",
-            'noTelp.regex' => "Isi dengan angka",
+            'npm.regex' => "Isi hanya dengan 4 angka",
+            'noTelp.regex' => "Isi hanya dengan 9-15 angka",
         ]);
         $user = User::find($id);
         $profile = Profile::find($id);
