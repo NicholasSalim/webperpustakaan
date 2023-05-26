@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+       
         
        
     </head>
@@ -45,6 +46,71 @@
         </header>
         @include('show.showbook')
         
+        <section class="page-section portfolio" style="background-color:#F7F7F7" id="help">
+            <div class="container">
+                 <!-- Portfolio Section Heading-->
+                 <h5 class="page-section-heading text-center text-uppercase text-secondary mb-0">Bantuan</h5>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <div class="row mt-5">
+                        <div class="dropdown" style="display: flex;justify-content: center; align-items: center;">
+                        <button  class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" style="width:500px; height:50px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bagaimana cara membuat akun?
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2"  >
+                            <p style="width:700px; margin-left: 10px;">Klik tombol 'Sign Up' pada navbar bagian pojok kanan atas, setelah itu anda akan ditujukan pada halaman register.</p>
+                            <p style="width:700px; margin-left: 10px;">Dalam halaman tersebut, isilah informasi pribadi anda sesuai dengan format yang telah ditentukan.</p>
+                        </div>
+                        </div>
+
+                        <div class="dropdown mt-1" style="display: flex;justify-content: center; align-items: center;">
+                        <button  class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" style="width:500px;height:50px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cara meminjam buku?
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2"  >
+                            <p style="width:700px; margin-left: 10px;">Pada dasboard siswa terdapat sidebar pada ujung kiri. Klik tombol 'Pinjam Buku' dan anda akan ditautkan pada halaman peminjaman buku. Anda akan disajikan dengan list buku lalu pilihlah buku yang ingin dipinjam. Selanjutnya klik tombol 'Submit' untuk meminjam buku. </p>
+                        </div>
+                        </div>
+
+                        <div class="dropdown mt-1" style="display: flex;justify-content: center; align-items: center;">
+                        <button  class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" style="width:500px;height:50px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Peraturan peminjaman buku
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2"  >
+                            <p style="width:700px; margin-left: 10px;">Anda hanya dapat meminjam maksimal 3 buku dan setiap buku harus dikembalikan maksimal seminggu setelah tanggal peminjaman. Jika ingin mengembalikan buku, informasikan kepada petugas agar status buku akan dikembalikan.</p>
+                            <p style="width:700px; margin-left: 10px;">Peringatan : Jika ada keterlambatan pengembalian buku, kerusakan atau kehilangan maka akan didenda.</p>
+                        </div>
+                        </div>
+
+                        <div class="dropdown mt-1" style="display: flex;justify-content: center; align-items: center;">
+                        <button  class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" style="width:500px;height:50px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cara mengubah profil
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2"  >
+                            <p style="width:700px; margin-left: 10px;">Pada halaman dasboard terdapat foto serta nama anda di navbar pojok kanan paling atas. Lalu klik tombol tersebut untuk melihat menu dropdown. </p>
+                            <p style="width:700px; margin-left: 10px;">Klik bagian profil untuk ditautkan pada halaman profil. Lalu klik 'Edit Profil' untuk mengubah profil anda. Setelah itu klik 'Simpan' untuk menyimpan profil baru anda.</p>
+                        </div>
+                        </div>
+
+                        <div class="dropdown mt-1" style="display: flex;justify-content: center; align-items: center;">
+                        <button  class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" style="width:500px;height:50px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Keluar dari aplikasi
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2"  >
+                        <p style="width:700px; margin-left: 10px;">Pada halaman dasboard terdapat foto serta nama anda di navbar pojok kanan paling atas. Lalu klik tombol tersebut untuk melihat menu dropdown. </p>
+                        <p style="width:700px; margin-left: 10px;">Klik tombol 'Keluar' untuk keluar dari halaman. Website akan memberi peringatan sebelum keluar. Klik 'Batal' untuk batal dan klik 'Keluar' untuk keluar.</p>
+                        </div>
+                        </div>
+
+                        
+                </div>
+
+        </section>
         
         <!-- Footer-->
         <footer class="footer text-center">
@@ -99,7 +165,9 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-       
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
 
