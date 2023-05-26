@@ -67,8 +67,8 @@ class RiwayatPinjamController extends Controller
             'buku_id'=>'required'
         ],
         [
-            'users_id.required'=> 'Harap Masukan Nama Peminjam',
-            'buku_id.required'=> 'Masukan Buku yang akan dipinjam'
+            'users_id.required'=> 'Harap masukan nama peminjam',
+            'buku_id.required'=> 'Masukkan buku yang akan dipinjam'
         ]
     );
         $request['tanggal_pinjam'] = Carbon::now()->toDateString();
@@ -89,7 +89,7 @@ class RiwayatPinjamController extends Controller
                 Peminjaman::create($request->all());
                 // Proses update tabel buku
                 $buku = Buku::findOrFail($request->buku_id);
-                $buku->status = 'dipinjam';
+                $buku->status = 'Dipinjam';
                 $buku->save();
                 DB::commit();
 

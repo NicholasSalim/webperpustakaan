@@ -18,7 +18,7 @@ class PengembalianController extends Controller
     public function index(){
         $iduser = Auth::id();
         $profile = Profile::where('users_id',$iduser)->first();
-        $buku = Buku::where('status','dipinjam')->get();
+        $buku = Buku::where('status','Dipinjam')->get();
         $user = User::all();
         $peminjam = Profile::where('users_id','>','1')->get();
 

@@ -50,7 +50,7 @@
                                 <p class="card-text m-0">Pengarang : <a href="#" style="color:#1abc9c;"
                                         style="text-decoration: none; ">{{ $item->pengarang }}</a></p>
                                 <p class="card-text m-0">Kategori : </p>
-                                <p class="text-primary">
+                                <p class="" style="color:#1abc9c;">
                                     @foreach ($item->kategori_buku as $kategori )
                                     {{ $kategori->nama, }},
                                     @endforeach
@@ -83,22 +83,22 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="ModalLabelDelete">Yakin?</h5>
+                                            <h5 class="modal-title" id="ModalLabelDelete">Apakah anda yakin?</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Hapus buku?</p>
+                                            <p>Hapus buku berikut?</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-primary"
-                                                data-dismiss="modal">Cancel</button>
+                                                data-dismiss="modal">Batal</button>
                                             <form action="/buku/{{ $item->id }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button class="btn btn-outline-danger px-4" type="submit"
-                                                    value="delete">Delete</button>
+                                                    value="delete">Hapus</button>
                                             </form>
                                         </div>
                                     </div>

@@ -50,24 +50,27 @@ class AnggotaController extends Controller
     {
         $request->validate([
             'name'=> 'required',
-            'npm'=> 'required|unique:profile',
+            'npm'=> 'required|unique:profile|',
             'prodi'=> 'required',
             'alamat'=> 'required',
-            'noTelp'=> 'required',
+            'noTelp'=> 'required|regex:/^[0-9]*$/',
             'email'=>'required|unique:users',
-            'password'=>'required|min:8',
+            'password'=>'required|min:8|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/',
         ],
         [
             'name.required'=>"Nama tidak boleh kosong",
             'npm.required'=>"Nomor Induk tidak boleh kosong",
-            'npm.unique'=>"NPM Telah Digunakan",
-            'prodi.required'=>"Prodi tidak boleh kosong",
+            'npm.unique'=>"NIS Telah Digunakan",
+            'npm.regex' => "Isi dengan 4 angka",
+            'prodi.required'=>"Kelas tidak boleh kosong",
             'alamat.required'=>"Alamat tidak boleh kosong",
             'noTelp.required'=>"Nomor Telepon tidak boleh kosong",
+            'noTelp.regex' => "Isi dengan angka",
             'email.required'=>"Email tidak boleh kosong",
             'email.unique'=>"Email Telah Digunakan",
             'password.required'=>"Password Tidak boleh kosong",
-            'password.min'=>"Password tidak boleh kurang dari 8 karakter"
+            'password.min'=>"Password tidak boleh kurang dari 8 karakter",
+            'password.regex' => "Password harus memiliki 8 karakter, 1 karakter spesial, 1 huruf besar, 1 huruf kecil dan sebuah angka"
         ]);
 
         $user = User::create([
@@ -126,26 +129,28 @@ class AnggotaController extends Controller
     {
         $request->validate([
             'name'=> 'required',
-            'npm'=> 'required',
+            'npm'=> 'required|regex:/^\d{4}$/',
             'prodi'=> 'required',
             'alamat'=> 'required',
-            'noTelp'=> 'required',
+            'noTelp'=> 'required|regex:/^[0-9]*$/',
             'photoProfile'=> 'nullable|mimes:jpg,jpeg,png|max:2048'
         ],
         [
             'name.required'=>"Nama tidak boleh kosong",
             'npm.required'=>"Nomor Induk tidak boleh kosong",
-            'prodi.required'=>"Prodi tidak boleh kosong",
+            'prodi.required'=>"Kelas tidak boleh kosong",
             'alamat.required'=>"Alamat tidak boleh kosong",
             'noTelp.required'=>"Nomor Telepon tidak boleh kosong",
             'photoProfile.mimes' =>"Foto Profile Harus Berupa jpg,jpeg,atau png",
-            'photoProfile.max' => "ukuran gambar tidak boleh lebih dari 2048 MB"
+            'photoProfile.max' => "Ukuran gambar tidak boleh lebih dari 2048 MB",
+            'npm.regex' => "Isi dengan 4 angka",
+            'noTelp.regex' => "Isi dengan angka",
         ]);
         $user = User::find($id);
         $profile = Profile::find($id);
 
         if($request->has('photoProfile')){
-         $path='images/photoProifle';
+         $path='images/photoProfile';
 
          File::delete($path.$profile->photoProfile);
 
@@ -182,7 +187,7 @@ class AnggotaController extends Controller
 
         $user->delete();
 
-        Alert::success('Berhasil', 'Berhasil Mengapus Anggota');
+        Alert::success('Berhasil', 'Berhasil Menghapus Anggota');
         return redirect('anggota');
     }
 }

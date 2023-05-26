@@ -27,27 +27,29 @@ class ProfileController extends Controller
     public function update(request $request, $id){
         $request->validate([
             'name'=> 'required',
-            'npm'=> 'required',
+            'npm'=> 'required|regex:/^\d{4}$/',
             'prodi'=> 'required',
             'alamat'=> 'required',
-            'noTelp'=> 'required',
+            'noTelp'=> 'required|regex:/^[0-9]*$/',
             'photoProfile'=> 'nullable|mimes:jpg,jpeg,png|max:2048'
         ],
         [
             'name.required'=>"Nama tidak boleh kosong",
             'npm.required'=>"Nomor Induk tidak boleh kosong",
+            'npm.regex'=>"Isi dengan 4 angka",
             'prodi.required'=>"Prodi tidak boleh kosong",
             'alamat.required'=>"Alamat tidak boleh kosong",
             'noTelp.required'=>"Nomor Telepon tidak boleh kosong",
+            'noTelp.regex'=> "Isi dengan angka",
             'photoProfile.mimes' =>"Foto Profile Harus Berupa jpg,jpeg,atau png",
-            'photoProfile.max' => "ukuran gambar tidak boleh lebih dari 2048 MB"
+            'photoProfile.max' => "ukuran gambar tidak boleh lebih dari 2048 MB",
         ]);
         $iduser = Auth::id();
         $profile = Profile::where('users_id',$iduser)->first();
         $user = User::where('id',$iduser)->first();
 
         if($request->has('photoProfile')){
-         $path='images/photoProifle';
+         $path='images/photoProfile';
 
          File::delete($path.$profile->photoProfile);
 

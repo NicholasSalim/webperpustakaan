@@ -69,14 +69,14 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="ModalLabelDelete">Yakin?</h5>
+                                                        <h5 class="modal-title" id="ModalLabelDelete">Apakah anda yakin?</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Hapus kategori?</p>
+                                                        <p>Hapus kategori berikut?</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-outline-primary"
@@ -84,8 +84,8 @@
                                                         <form action="/kategori/{{ $item->id }}" method="post" id="DeleteModal">
                                                             @csrf
                                                             @method('delete')
-                                                            <input type="submit"
-                                                             value="delete" class="btn btn-outline-danger">
+                                                            <button type="submit"
+                                                             value="delete" class="btn btn-outline-danger">Hapus</button>
                                                         </form>
                                                     </div>
                                                 </div>

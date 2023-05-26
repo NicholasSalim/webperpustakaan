@@ -57,7 +57,6 @@ class BukuController extends Controller
             [
                 'judul' => 'required',
                 'kode_buku'=>'required|unique:buku',
-                'kategori_buku'=>'required',
                 'pengarang' => 'required',
                 'penerbit' => 'required',
                 'tahun_terbit' => 'required',
@@ -65,16 +64,16 @@ class BukuController extends Controller
                 'gambar' => 'nullable|mimes:jpg,jpeg,png|max:2048',
             ],
             [
-                'judul.required' => 'judul tidak boleh kosong',
-                'kode_buku.required'=> 'Kode Buku Tidak Boleh Kosong',
-                'kode_buku.unique'=> 'Kode Buku Telah Tersedia',
-                'kategori_buku.required' =>'Harap masukan kategori',
-                'pengarang.required' => 'pengarang tidak boleh kosong',
-                'penerbit.requiered' => 'penerbit tidak boleh kosong',
-                'tahun_terbit.required' => 'harap isi tahun terbit',
-                'deskripsi.required' => 'deskripsi tidak boleh kosong',
+                'judul.required' => 'Judul tidak boleh kosong',
+                'kode_buku.required'=> 'Kode Buku tidak boleh kosong',
+                'kode_buku.unique'=> 'Kode Buku telah digunakan',
+                
+                'pengarang.required' => 'Pengarang tidak boleh kosong',
+                'penerbit.required' => 'Penerbit tidak boleh kosong',
+                'tahun_terbit.required' => 'Harap isi tahun terbit',
+                'deskripsi.required' => 'Deskripsi tidak boleh kosong',
                 'gambar.mimes' => 'Gambar Harus Berupa jpg,jpeg,atau png',
-                'gambar.max' => 'ukuran gambar tidak boleh lebih dari 2048 MB',
+                'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 2048 MB',
             ],
         );
 
@@ -148,16 +147,18 @@ class BukuController extends Controller
                 'penerbit' => 'required',
                 'tahun_terbit' => 'required',
                 'deskripsi' => 'required',
+           
                 'gambar' => 'nullable|mimes:jpg,jpeg,png|max:2048',
             ],
             [
-                'judul.required' => 'judul tidak boleh kosong',
-                'pengarang.required' => 'pengarang tidak boleh kosong',
-                'penerbit.requiered' => 'penerbit tidak boleh kosong',
-                'tahun_terbit.required' => 'harap isi tahun terbit',
-                'deskripsi.required' => 'deskripsi tidak boleh kosong',
+                'judul.required' => 'Judul tidak boleh kosong',
+                'pengarang.required' => 'Pengarang tidak boleh kosong',
+                'penerbit.requiered' => 'Penerbit tidak boleh kosong',
+               
+                'tahun_terbit.required' => 'Harap isi tahun terbit',
+                'deskripsi.required' => 'Deskripsi tidak boleh kosong',
                 'gambar.mimes' => 'Gambar Harus Berupa jpg,jpeg,atau png',
-                'gambar.max' => 'ukuran gambar tidak boleh lebih dari 2048 MB',
+                'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 2048 MB',
             ],
         );
 

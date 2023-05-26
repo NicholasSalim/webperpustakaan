@@ -50,21 +50,21 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabelLogout">Yakin?</h5>
+                                    <h5 class="modal-title" id="exampleModalLabelLogout">Apakah anda yakin?</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Logout?</p>
+                                    <p>Keluar dari halaman?</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-primary"
-                                        data-dismiss="modal">Cancel</button>
+                                        data-dismiss="modal">Batal</button>
                                     <a href="{{ route('logout') }}" class="btn btn-outline-danger"
                                         onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Keluar') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
