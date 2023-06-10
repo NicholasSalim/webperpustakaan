@@ -678,7 +678,7 @@ class DatabaseSeeder extends Seeder
             'Pengarang' => 'Susan Wise Bauer',
             'Penerbit' => 'W. W. Norton & Company',
             'tahun_terbit'=> '2010',
-            'gambar' => 'SStory_of_Western_Science.jpg',
+            'gambar' => 'Story_of_Western_Science.jpg',
             'deskripsi'=>'Buku ini menggambarkan perkembangan ilmu pengetahuan dari zaman kuno hingga saat ini. Dengan bahasa yang mudah dipahami, buku ini mengajak pembaca untuk menjelajahi evolusi ide dan pemikiran manusia dalam memahami alam semesta.'
             ]);
 
