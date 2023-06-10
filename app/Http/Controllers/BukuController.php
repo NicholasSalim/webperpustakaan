@@ -59,7 +59,7 @@ class BukuController extends Controller
                 'kode_buku'=>'required|unique:buku',
                 'pengarang' => 'required',
                 'penerbit' => 'required',
-                'tahun_terbit' => 'required',
+                'tahun_terbit' => 'required|regex:/^\d{4}$/',
                 'deskripsi' => 'required',
                 'gambar' => 'nullable|mimes:jpg,jpeg,png|max:2048',
             ],
@@ -67,7 +67,7 @@ class BukuController extends Controller
                 'judul.required' => 'Judul tidak boleh kosong',
                 'kode_buku.required'=> 'Kode Buku tidak boleh kosong',
                 'kode_buku.unique'=> 'Kode Buku telah digunakan',
-                
+                'tahun_terbit.regex' => 'Isi dengan 4 angka',
                 'pengarang.required' => 'Pengarang tidak boleh kosong',
                 'penerbit.required' => 'Penerbit tidak boleh kosong',
                 'tahun_terbit.required' => 'Harap isi tahun terbit',

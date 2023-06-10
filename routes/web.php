@@ -25,11 +25,14 @@ use App\Http\Controllers\ShowController;
 */
 
 Route::get('/', [ShowController::class,'index','show']);
+Auth::routes([
+    'verify' => true
+]);
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('verified');
 
     Route::resource('kategori', KategoriController::class);
 

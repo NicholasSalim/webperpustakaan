@@ -26,24 +26,7 @@ class DatabaseSeeder extends Seeder
         'password' => Hash::make('admin123'),
         'isAdmin' => '1',
      ]);
-     User::create([
-        'name'=> 'Andi',
-        'email'=>'andi@gmail.com',
-        'password' => Hash::make('andi'),
-        'isAdmin' => '0',
-     ]);
-     User::create([
-        'name'=> 'Budi',
-        'email'=>'budi@gmail.com',
-        'password' => Hash::make('budi'),
-        'isAdmin' => '0',
-     ]);
-     User::create([
-        'name'=> 'Yanto',
-        'email'=>'yanto@gmail.com',
-        'password' => Hash::make('yanto'),
-        'isAdmin' => '0',
-     ]);
+     
 
      Profile::create([
     'npm'=>'-',
@@ -54,29 +37,415 @@ class DatabaseSeeder extends Seeder
     'photoProfile' => 'amirhamzahlogo.png',
     ]);
 
+    User::create([
+        'name'=> 'Bunga Namira',
+        'email'=>'bunga@gmail.com',
+        'password' => Hash::make('bunga'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Ayu Syafira',
+        'email'=>'ayu@gmail.com',
+        'password' => Hash::make('ayu'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Rahma Ayu',
+        'email'=>'rahma@gmail.com',
+        'password' => Hash::make('rahma'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Emi Nurmasari',
+        'email'=>'emi@gmail.com',
+        'password' => Hash::make('emi'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Aura Syafira',
+        'email'=>'aura@gmail.com',
+        'password' => Hash::make('aura'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Erizon',
+        'email'=>'erizon@gmail.com',
+        'password' => Hash::make('erizon'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Wulan Idianti',
+        'email'=>'wulan@gmail.com',
+        'password' => Hash::make('wulan'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Yuliantika',
+        'email'=>'yuli@gmail.com',
+        'password' => Hash::make('yuli'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Juliana',
+        'email'=>'juli@gmail.com',
+        'password' => Hash::make('juli'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Maulana',
+        'email'=>'maulana@gmail.com',
+        'password' => Hash::make('maulana'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Ferran',
+        'email'=>'ferran@gmail.com',
+        'password' => Hash::make('ferran'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Nabila',
+        'email'=>'nabila@gmail.com',
+        'password' => Hash::make('nabila'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Ilham',
+        'email'=>'ilham@gmail.com',
+        'password' => Hash::make('ilham'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Taufan Alim',
+        'email'=>'taufan@gmail.com',
+        'password' => Hash::make('taufan'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Muhammad Rizky Nasution',
+        'email'=>'rizkynst@gmail.com',
+        'password' => Hash::make('rizkynst'),
+        'isAdmin' => '0',
+     ]);
+     
+     User::create([
+        'name'=> 'Muhammad Syarif',
+        'email'=>'syarif@gmail.com',
+        'password' => Hash::make('syarif'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Muhammad Fadil Yahya',
+        'email'=>'fadil@gmail.com',
+        'password' => Hash::make('fadil'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Muhammad Rizky',
+        'email'=>'rizky@gmail.com',
+        'password' => Hash::make('rizky'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Muhammad Andre Ritonga',
+        'email'=>'andre@gmail.com',
+        'password' => Hash::make('andre'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Yusuf Ari Wibowo',
+        'email'=>'yusuf@gmail.com',
+        'password' => Hash::make('yusuf'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Bambang',
+        'email'=>'bambang@gmail.com',
+        'password' => Hash::make('bambang'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Yuma',
+        'email'=>'yuma@gmail.com',
+        'password' => Hash::make('yuma'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Diki',
+        'email'=>'diki@gmail.com',
+        'password' => Hash::make('diki'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Adam',
+        'email'=>'adam@gmail.com',
+        'password' => Hash::make('adam'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Wahyu',
+        'email'=>'wahyu@gmail.com',
+        'password' => Hash::make('wahyu'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Fina',
+        'email'=>'fina@gmail.com',
+        'password' => Hash::make('fina'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Farel',
+        'email'=>'farel@gmail.com',
+        'password' => Hash::make('farel'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Agus',
+        'email'=>'agus@gmail.com',
+        'password' => Hash::make('agus'),
+        'isAdmin' => '0',
+     ]);
+     User::create([
+        'name'=> 'Reza',
+        'email'=>'reza@gmail.com',
+        'password' => Hash::make('reza'),
+        'isAdmin' => '0',
+     ]);
+
      Profile::create([
-     'npm'=>'2101',
-     'prodi'=>'Kelas A',
-     'alamat'=>'Jalan ABC',
-     'noTelp'=>'089609760132',
+     'npm'=>'0002',
+     'prodi'=>'VII-A',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
      'users_id'=>'2',
      ]);
 
      Profile::create([
-     'npm'=>'2111',
-     'prodi'=>'Kelas B',
-     'alamat'=>'Jalan ABC',
+     'npm'=>'0003',
+     'prodi'=>'VII-A',
+     'alamat'=>'Jalan Meranti',
      'noTelp'=>'08123975855',
      'users_id'=>'3',
      ]);
 
      Profile::create([
-     'npm'=>'2102',
-     'prodi'=>'Kelas C',
-     'alamat'=>'Jalan ABC',
-     'noTelp'=>'08958923134',
+     'npm'=>'0004',
+     'prodi'=>'VII-A',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
      'users_id'=>'4',
      ]);
+
+     Profile::create([
+     'npm'=>'0005',
+     'prodi'=>'VII-A',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'5',
+     ]);
+
+     Profile::create([
+     'npm'=>'0006',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'6',
+     ]);
+
+     Profile::create([
+     'npm'=>'0007',
+     'prodi'=>'VII-A',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'7',
+     ]);
+
+     Profile::create([
+     'npm'=>'0008',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'8',
+     ]);
+
+     Profile::create([
+     'npm'=>'0009',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'9',
+     ]);
+
+     Profile::create([
+     'npm'=>'0010',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'10',
+     ]);
+
+     Profile::create([
+     'npm'=>'0011',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'11',
+     ]);
+
+     Profile::create([
+     'npm'=>'0012',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'12',
+     ]);
+
+     Profile::create([
+     'npm'=>'0013',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'13',
+     ]);
+
+     Profile::create([
+     'npm'=>'0014',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'14',
+     ]);
+
+     Profile::create([
+     'npm'=>'0015',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'15',
+     ]);
+
+     Profile::create([
+     'npm'=>'0016',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'16',
+     ]);
+
+     Profile::create([
+     'npm'=>'0017',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'17',
+     ]);
+
+     Profile::create([
+     'npm'=>'0018',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'18',
+     ]);
+
+     Profile::create([
+     'npm'=>'0019',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'19',
+     ]);
+
+     Profile::create([
+     'npm'=>'0020',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'20',
+     ]);
+
+     Profile::create([
+     'npm'=>'0021',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'21',
+     ]);
+
+     Profile::create([
+     'npm'=>'0022',
+     'prodi'=>'XI-IIS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'22',
+     ]);
+
+     Profile::create([
+     'npm'=>'0023',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'23',
+     ]);
+
+     Profile::create([
+     'npm'=>'0024',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'24',
+     ]);
+
+     Profile::create([
+     'npm'=>'0025',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'25',
+     ]);
+
+     Profile::create([
+     'npm'=>'0026',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'26',
+     ]);
+
+     Profile::create([
+     'npm'=>'0027',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'27',
+     ]);
+
+     Profile::create([
+     'npm'=>'0028',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'28',
+     ]);
+
+     Profile::create([
+     'npm'=>'0029',
+     'prodi'=>'XI-IPS',
+     'alamat'=>'Jalan Meranti',
+     'noTelp'=>'08123975855',
+     'users_id'=>'29',
+     ]);
+
+     Profile::create([
+        'npm'=>'0030',
+        'prodi'=>'XI-IPS',
+        'alamat'=>'Jalan Meranti',
+        'noTelp'=>'08123975855',
+        'users_id'=>'30',
+        ]);
+   
+
 
 
     Kategori::create([

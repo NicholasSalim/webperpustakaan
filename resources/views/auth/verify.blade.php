@@ -1,25 +1,29 @@
-@extends('layouts.app')
+@extends('layouts.welcome')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+                <div class="card-body text-dark">{{ __('Verifikasi Email Anda') }}</div>
 
-                <div class="card-body">
+                <div class="card-body text-dark align-items-start">
                     @if (session('resent'))
-                        <div class="alert alert-success" role="alert">
-                            {{ __('A fresh verification link has been sent to your email address.') }}
+                        <div class="alert alert-info" role="alert">
+                            {{ __('Link verifikasi telah dikirim ke email anda.') }}
                         </div>
                     @endif
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }},
+                    {{ __('Sebelum melanjutkan, mohon cek email anda untuk link verifikasi.') }}
+                    {{ __('Jika anda tidak menerima link dari email, silahkan klik tombol dibawah untuk request link verifikasi lagi.') }},
+                    <div class="card-body">
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+
+                        <button type="submit" class="btn px-5" style="background-color:#1abc9c; color:white;">{{ __('Request') }}</button>
+
                     </form>
+                    </div>
                 </div>
             </div>
         </div>

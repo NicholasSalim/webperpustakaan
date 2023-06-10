@@ -45,13 +45,11 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                        <span class="col-md-8 mb-3 text-md-end text-dark"><a href="{{ route('register') }}" class="p-0 mr-3" style="color:#1abc9c;">Belum punya akun ?</a></span>
-                        </div>
+                        
 
                         <div class="row mb-0">
                             <div class="col-md-4 offset-md-4">
-                                <button type="submit" class="btn px-5" style="background-color:#1abc9c; color:white;">
+                                <button type="submit" class="btn" style="background-color:#1abc9c; color:white;">
                                     {{ __('Login') }}
                                 </button>
                             </div>
