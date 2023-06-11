@@ -29,6 +29,7 @@
 
                 @if (Auth::user()->isAdmin == 1)
                     <a class="collapse-item" href="/buku/create">Tambah Buku</a>
+                    <a class="collapse-item" href="/reportbuku">Laporan Buku</a>
                 @endif
 
             </div>

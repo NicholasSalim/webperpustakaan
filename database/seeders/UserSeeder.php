@@ -197,5 +197,14 @@ class UserSeeder extends Seeder
             'password' => Hash::make('reza'),
             'isAdmin' => '0',
          ]);
+
+         for ($userId = 31; $userId <= 200; $userId++) {
+            User::create([
+                'name' => 'User ' . $userId,
+                'email' => 'user' . $userId . '@gmail.com',
+                'password' => Hash::make('password' . $userId),
+                'isAdmin' => '0',
+            ]);
+         }
     }
 }

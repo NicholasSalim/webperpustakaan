@@ -9,8 +9,12 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CetakLaporanController;
+use App\Http\Controllers\CetakBukuController;
+use App\Http\Controllers\CetakBukuDipinjamController;
+use App\Http\Controllers\CetakBukuInstockController;
 use App\Http\Controllers\PengembalianController;
 use App\Http\Controllers\RiwayatPinjamController;
+use App\Http\Controllers\ReportBukuController;
 use App\Http\Controllers\ShowController;
 
 /*
@@ -38,6 +42,12 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('buku', BukuController::class);
 
+    Route::get('/reportbuku', [App\Http\Controllers\ReportBukuController::class, 'index'])->name('buku.report');
+
+    Route::get('/reportbuku/dipinjam', [App\Http\Controllers\ReportBukuController::class, 'dipinjam'])->name('buku.laporanbukudipinjam');
+
+    Route::get('/reportbuku/instock', [App\Http\Controllers\ReportBukuController::class, 'instock'])->name('buku.laporanbukuinstock');
+
     Route::resource('anggota', AnggotaController::class);
 
     Route::resource('profile', ProfileController::class)->only('index','update','edit');
@@ -45,6 +55,12 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('peminjaman', RiwayatPinjamController::class);
 
     Route::get('/cetaklaporan', CetakLaporanController::class);
+
+    Route::get('/cetakbuku', CetakBukuController::class);
+
+    Route::get('/cetakbukudipinjam', CetakBukuDipinjamController::class);
+
+    Route::get('/cetakbukuinstock', CetakBukuInstockController::class);
 
     Route::get('/pengembalian', [PengembalianController::class,'index']);
 

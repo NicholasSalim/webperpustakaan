@@ -23,7 +23,7 @@
         </div>
 
         @error('name')
-            <div class="alert-danger"> {{ $message }}</div>
+            <div class="alert-danger  mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
         <div class="form-group mx-4 my-2">
@@ -32,7 +32,7 @@
         </div>
 
         @error('npm')
-        <div class="alert-danger"> {{ $message }}</div>
+        <div class="alert-danger  mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
         <div class="form-group mx-4 my-2">
@@ -41,7 +41,7 @@
         </div>
 
         @error('prodi')
-            <div class="alert-danger mx-2"> {{ $message }}</div>
+            <div class="alert-danger mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
         <div class="form-group mx-4 my-2">
@@ -50,7 +50,7 @@
         </div>
 
         @error('alamat')
-            <div class="alert-danger"> {{ $message }}</div>
+            <div class="alert-danger  mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
         <div class="form-group mx-4 my-2">
@@ -59,7 +59,7 @@
         </div>
 
         @error('noTelp')
-            <div class="alert-danger"> {{ $message }}</div>
+            <div class="alert-danger  mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
         <div class="form-group mx-4 my-2">
@@ -68,7 +68,7 @@
         </div>
 
         @error('email')
-            <div class="alert-danger"> {{ $message }}</div>
+            <div class="alert-danger  mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
         <div class="form-group mx-4 my-2">
@@ -77,7 +77,7 @@
         </div>
 
         @error('password')
-            <div class="alert-danger"> {{ $message }}</div>
+            <div class="alert-danger  mx-4" style="color:white;"> {{ $message }}</div>
         @enderror
 
 

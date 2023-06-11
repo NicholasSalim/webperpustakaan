@@ -257,5 +257,15 @@ class ProfileSeeder extends Seeder
                 'noTelp'=>'08123975855',
                 'users_id'=>'30',
                 ]);
+
+                for ($npm = 31; $npm <= 200; $npm++) {
+                    Profile::create([
+                        'npm' => str_pad($npm, 4, '0', STR_PAD_LEFT),
+                        'prodi' => 'XI-IPS',
+                        'alamat' => 'Jalan Meranti',
+                        'noTelp' => '08123975855',
+                        'users_id' => $npm,
+                    ]);
+                }
     }
 }
